@@ -7,14 +7,14 @@ const getRequest = () =>
     axios
       .get(`${constants.firebaseConfig.databaseURL}/Pokedex.json`)
       .then(res => {
-        const pokemon = [];
+        const pokedex = [];
         if (res.data !== null) {
           Object.keys(res.data).forEach(fbKey => {
             res.data[fbKey].id = fbKey;
-            pokemon.push(res.data[fbKey]);
+            pokedex.push(res.data[fbKey]);
           });
         }
-        resolve(pokemon);
+        resolve(pokedex);
       })
       .catch(err => {
         reject(err);
@@ -22,4 +22,72 @@ const getRequest = () =>
   });
 };
 
-export default getRequest;
+const postRequest = (pokemon) =>
+{
+  return new Promise((resolve, reject) =>
+  {
+    axios
+      .post(`${constants.firebaseConfig.databaseURL}/MyTeam.json`, pokemon)
+      .then((res) =>
+      {
+        resolve(res);
+      })
+      .catch((err) =>
+      {
+        reject(err);
+      });
+  });
+};
+
+const getRequest2 = (uid) =>
+{
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/MyTeam.json?orderBy="uid"&equalTo="${uid}"`)
+      .then(res => {
+        const team = [];
+        if (res.data !== null) {
+          Object.keys(res.data).forEach(fbKey => {
+            res.data[fbKey].id = fbKey;
+            team.push(res.data[fbKey]);
+          });
+        }
+        resolve(team);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+};
+
+const getSingleRequest = (id) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/MyTeam/${id}.json`)
+      .then(res => {
+        resolve(res.data);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+};
+
+const deleteRequest = (pokemonId) =>
+{
+  return new Promise((resolve, reject) =>
+  {
+    axios
+      .delete(`${constants.firebaseConfig.databaseURL}/MyTeam/${pokemonId}.json`)
+      .then((res) =>
+      {
+        resolve(res);
+      })
+      .catch((err) =>
+      {
+        reject(err);
+      });
+  });
+};
+
+export default {getRequest, postRequest, getRequest2, getSingleRequest, deleteRequest};

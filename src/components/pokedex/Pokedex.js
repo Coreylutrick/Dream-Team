@@ -1,14 +1,35 @@
 import React from 'react';
 import pokemonRequests from '../../firebaseRequests/requests';
 import authRequests from '../../firebaseRequests/auth';
-import pokeEntry from '../pokeEntry/PokeEntry';
+import PokeEntry from '../pokeEntry/PokeEntry';
 
 import './Pokedex.css';
 
 class Pokedex extends React.Component
 {
-  state = {
+  state =
+  {
     pokemon: [],
+  }
+
+  saveNewPokemon = (key) =>
+  {
+    let newPokemon = {};
+    const allPokemon = {...this.state.pokemon};
+    Object.keys(allPokemon).forEach((pokemon) =>
+    {
+      if (allPokemon[pokemon].id === key)
+      {
+        newPokemon = allPokemon[pokemon];
+        newPokemon.uid = authRequests.getUid();
+      }
+    });
+    pokemonRequests.postRequest(newPokemon)
+      .then(() =>
+      {
+        this.props.history.push('./Pokedex');
+      })
+      .catch((err) => { console.error(err); });
   }
 
   componentDidMount ()
@@ -33,6 +54,7 @@ class Pokedex extends React.Component
         <PokeEntry
           key={pokeEntry.id}
           details={pokeEntry}
+          saveNewPokemon={this.saveNewPokemon}
         />
       );
     });
