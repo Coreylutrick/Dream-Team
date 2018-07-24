@@ -1,0 +1,134 @@
+{
+  "pokemon1": {
+    "name": "Bulbasaur",
+    "number": "1",
+    "imgUrl": "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+    "type1": "grassType",
+    "type2": "posionType",
+    "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
+    "height": "2′04″ (0.7 m)",
+    "weight": "15.2 lbs",
+    "ability1": "overgrowAbility",
+    "ability2": "chlorophyllAbility",
+    "baseStats": {
+      "hp": "45",
+      "attack": "49",
+      "defense": "49",
+      "spAtk": "65",
+      "spDef": "65",
+      "spd": "45",
+      "total": "318"
+    },
+    "uid" : "12345"
+  },
+  "pokemon2": {
+    "name": "Ivysaur",
+    "number": "2",
+    "imgUrl": "https://img.pokemondb.net/artwork/ivysaur.jpg",
+    "type1": "grassType",
+    "type2": "poisonType",
+    "description": "There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.",
+    "height": "3′03″ (1.0 m)",
+    "weight": "28.7 lbs",
+    "ability1": "overgrowAbility",
+    "ability2": "chlorophyllAbility",
+    "baseStats": {
+      "hp": "60",
+      "attack": "62",
+      "defense": "63",
+      "spAtk": "80",
+      "spDef": "80",
+      "spd": "60",
+      "total": "405"
+    },
+    "uid" : "12345"
+  },
+  "pokemon3": {
+    "name": "Venusaur",
+    "number": "3",
+    "imgUrl": "https://img.pokemondb.net/artwork/venusaur.jpg",
+    "type1": "poisonType",
+    "type2": "grassType",
+    "description": "There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.",
+    "height": "6′07″ (2.0 m)",
+    "weight": "220.5 lbs",
+    "ability1": "overgrowAbility",
+    "ability2": "chlorophyllAbility",
+    "baseStats": {
+      "hp": "80",
+      "attack": "82",
+      "defense": "83",
+      "spAtk": "100",
+      "spDef": "100",
+      "spd": "80",
+      "total": "525"
+    },
+    "uid" : "12345"
+  },
+  "pokemon4": {
+    "name": "Charmander",
+    "number": "4",
+    "imgUrl": "https://img.pokemondb.net/artwork/charmander.jpg",
+    "type1": "fireType",
+    "type2": "None",
+    "description": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.",
+    "height": "2′00″ (0.6 m)",
+    "weight": "18.7 lbs",
+    "ability1": "blazeAbility",
+    "ability2": "solarPowerAbility",
+    "baseStats": {
+      "hp": "39",
+      "attack": "52",
+      "defense": "43",
+      "spAtk": "60",
+      "spDef": "50",
+      "spd": "65",
+      "total": "309"
+    },
+    "uid" : "12345"
+  },
+  "pokemon5": {
+    "name": "Charmeleon",
+    "number": "5",
+    "imgUrl": "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+    "type1": "fireType",
+    "type2": "None",
+    "description": "Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.",
+    "height": "3′07″",
+    "weight": "41.9 lbs",
+    "ability1": "blazeAbility",
+    "ability2": "solarPowerAbility",
+    "baseStats": {
+      "hp": "58",
+      "attack": "64",
+      "defense": "58",
+      "spAtk": "80",
+      "spDef": "65",
+      "spd": "80",
+      "total": "405"
+    },
+    "uid" : "12345"
+  },
+  "pokemon6": {
+    "name": "Charizard",
+    "number": "6",
+    "imgUrl": "https://img.pokemondb.net/artwork/charizard.jpg",
+    "type1": "fireType",
+    "type2": "flyingType",
+    "description": "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.",
+    "height": "5′07″",
+    "weight": "199.5 lbs",
+    "ability1": "blazeAbility",
+    "ability2": "solarPowerAbility",
+    "baseStats": {
+      "hp": "78",
+      "attack": "84",
+      "defense": "78",
+      "spAtk": "10",
+      "spDef": "85",
+      "spd": "100",
+      "total": "534"
+    },
+    "uid" : "12345"
+  }
+}

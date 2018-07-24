@@ -13,7 +13,7 @@ class PokeEntry extends React.Component
     const {details} = this.props;
     const image = details.imgUrl;
     return (
-      <li className="pokemon">
+      <li className="pokemonEntry">
         <img src={image} alt={details.name}/>
         <h3>{details.name}</h3>
         <p>{details.description}</p>

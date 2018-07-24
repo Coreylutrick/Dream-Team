@@ -6,7 +6,8 @@ import './MyTeam.css';
 
 class MyTeam extends React.Component
 {
-  state = {
+  state =
+  {
     pokemon: [],
   }
 
@@ -33,13 +34,7 @@ class MyTeam extends React.Component
         this.props.history.push(`/pokemon/${pokemon.id}`);
       };
       return (
-        <button
-          key={pokemon.id}
-          className="teamPokemon"
-          onClick={singlePokemonClickEvent}
-        >
-          <img src={pokemon.imgUrl} alt={pokemon.name}/>
-        </button>
+        <img onClick={singlePokemonClickEvent} key={pokemon.id} src={pokemon.gifUrl} alt={pokemon.name}/>
       );
     });
     return (
