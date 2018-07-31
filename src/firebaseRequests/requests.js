@@ -90,4 +90,21 @@ const deleteRequest = (pokemonId) =>
   });
 };
 
-export default {getRequest, postRequest, getRequest2, getSingleRequest, deleteRequest};
+const putRequest = (pokemonId, updatedPokemon) =>
+{
+  return new Promise((resolve, reject) =>
+  {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/MyTeam/${pokemonId}.json`, updatedPokemon)
+      .then((res) =>
+      {
+        resolve(res);
+      })
+      .catch((err) =>
+      {
+        reject(err);
+      });
+  });
+};
+
+export default {getRequest, postRequest, getRequest2, getSingleRequest, deleteRequest, putRequest};
