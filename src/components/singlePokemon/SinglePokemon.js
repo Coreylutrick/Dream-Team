@@ -31,7 +31,7 @@ class SinglePokemon extends React.Component
     pokemonRequests.putRequest(pokemonId, updatedPokemon)
       .then(() =>
       {
-        this.props.history.push('/MyTeam');
+        this.props.history.push('/pokemon/:id');
       })
       .catch((err) =>
       {
@@ -106,6 +106,9 @@ class SinglePokemon extends React.Component
           <div>
             <img className="col-xs-4 pokeImg" src={mySinglePokemon.imgUrl} alt={mySinglePokemon.name}/>
           </div>
+        </div>
+        <div className="text-center">
+          <h3>Nickname:</h3><p>{mySinglePokemon.nickname}</p>
         </div>
         <div className="col-xs-4 col-xs-offset-4 text-center">
           <h4>{mySinglePokemon.description}</h4>

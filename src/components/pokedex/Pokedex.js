@@ -10,7 +10,17 @@ class Pokedex extends React.Component
   state =
   {
     pokemon: [],
+    searchedPokemon: [],
+    query: '',
   }
+
+  search = e =>
+  {
+    let tempQuery = {...this.state.query};
+    const query = e.target.value;
+    tempQuery = query;
+    this.setState({query: tempQuery});
+  };
 
   saveNewPokemon = (key) =>
   {
@@ -46,9 +56,25 @@ class Pokedex extends React.Component
       });
   }
 
+  searchPokemon = () =>
+  {
+    const newPokemonSearch = [];
+    const pokeArray = this.state.pokemon;
+    const query = this.state.query;
+    console.error(pokeArray);
+    for (let i = 0; i < pokeArray.length; i++)
+    {
+      if (pokeArray[i].name === query)
+      {
+        newPokemonSearch.push(pokeArray[i]);
+        this.setState({searchedPokemon: newPokemonSearch});
+      }
+    }
+  };
+
   render ()
   {
-    const AllPokemonComponent = this.state.pokemon.map((pokeEntry) =>
+    const AllPokemonComponent = this.state.searchedPokemon.map((pokeEntry) =>
     {
       return (
         <PokeEntry
@@ -60,8 +86,11 @@ class Pokedex extends React.Component
     });
     return (
       <div className="pokedex">
-        <h2>Pokedex</h2>
+        <h2 className="text-center">Pokedex</h2>
         <div className="row pokemonContainer">
+          <h3>Search:</h3>
+          <input id="searchThing" placeholder="Search pokemon by name, number, or type" onChange={this.search}/>
+          <button onClick={this.searchPokemon}>Search</button>
           {AllPokemonComponent}
         </div>
       </div>
