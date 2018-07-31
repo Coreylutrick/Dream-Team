@@ -1,6 +1,7 @@
 {
     "pokemon1": {
       "name": "Bulbasaur",
+      "nickname": "",
       "number": "1",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/bulbasaur.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/bulbasaur-2.gif",
@@ -21,6 +22,7 @@
     },
     "pokemon2": {
       "name": "Ivysaur",
+      "nickname": "",
       "number": "2",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/ivysaur.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/ivysaur-2.gif",
@@ -41,6 +43,7 @@
     },
     "pokemon3": {
       "name": "Venusaur",
+      "nickname": "",
       "number": "3",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/venusaur.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/venusaur.gif",
@@ -61,6 +64,7 @@
     },
     "pokemon4": {
       "name": "Charmander",
+      "nickname": "",
       "number": "4",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/charmander.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/charmander-3.gif",
@@ -81,6 +85,7 @@
     },
     "pokemon5": {
       "name": "Charmeleon",
+      "nickname": "",
       "number": "5",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/charmeleon.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/charmeleon-3.gif",
@@ -101,6 +106,7 @@
     },
     "pokemon6": {
       "name": "Charizard",
+      "nickname": "",
       "number": "6",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/charizard.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/charizard-3.gif",
@@ -121,6 +127,7 @@
     },
     "pokemon7": {
       "name": "Squirtle",
+      "nickname": "",
       "number": "7",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/squirtle.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/squirtle-3.gif",
@@ -141,6 +148,7 @@
     },
     "pokemon8": {
       "name": "Wartortle",
+      "nickname": "",
       "number": "8",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/wartortle.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/wartortle-3.gif",
@@ -161,6 +169,7 @@
     },
     "pokemon9": {
       "name": "Blastoise",
+      "nickname": "",
       "number": "9",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/blastoise.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/blastoise-4.gif",
@@ -181,6 +190,7 @@
     },
     "pokemon10": {
       "name": "Caterpie",
+      "nickname": "",
       "number": "10",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/caterpie.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/caterpie-2.gif",
@@ -201,6 +211,7 @@
     },
     "pokemon11": {
       "name": "Metapod",
+      "nickname": "",
       "number": "11",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/metapod.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/metapod.gif",
@@ -221,6 +232,7 @@
     },
     "pokemon12": {
       "name": "Butterfree",
+      "nickname": "",
       "number": "12",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/butterfree.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/butterfree-female.gif",
@@ -241,6 +253,7 @@
     },
     "pokemon13": {
       "name": "Weedle",
+      "nickname": "",
       "number": "13",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/weedle.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/weedle.gif",
@@ -261,6 +274,7 @@
     },
     "pokemon14": {
       "name": "Kakuna",
+      "nickname": "",
       "number": "14",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/kakuna.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/kakuna.gif",
@@ -281,6 +295,7 @@
     },
     "pokemon15": {
       "name": "Beedrill",
+      "nickname": "",
       "number": "15",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/beedrill.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/beedrill.gif",
@@ -301,6 +316,7 @@
     },
     "pokemon16": {
       "name": "Pidgey",
+      "nickname": "",
       "number": "16",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/pidgey.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/pidgey.gif",
@@ -321,6 +337,7 @@
     },
     "pokemon17": {
       "name": "Pidgeotto",
+      "nickname": "",
       "number": "17",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/pidgeotto.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/pidgeotto.gif",
@@ -341,6 +358,7 @@
     },
     "pokemon18": {
       "name": "Pidgeot",
+      "nickname": "",
       "number": "18",
       "imgUrl": "http://www.pokestadium.com/assets/img/sprites/official-art/pidgeot.png",
       "gifUrl": "http://www.pokestadium.com/sprites/xy/pidgeot.gif",

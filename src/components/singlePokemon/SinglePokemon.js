@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button, Modal} from 'react-bootstrap';
 
 import pokemonRequests from '../../firebaseRequests/requests';
 
@@ -9,7 +10,34 @@ class SinglePokemon extends React.Component
   state =
   {
     pokemon: [],
+    show: false,
+    nickname: '',
   }
+
+  nicknameUpdate = e =>
+  {
+    let tempNickname = {...this.state.nickname};
+    const nickname = e.target.value;
+    tempNickname = nickname;
+    this.setState({nickname: tempNickname});
+  };
+
+  saveNickname = (e) =>
+  {
+    const pokemonId = this.props.match.params.id;
+    e.preventDefault();
+    const updatedPokemon = this.state.pokemon;
+    updatedPokemon.nickname = this.state.nickname;
+    pokemonRequests.putRequest(pokemonId, updatedPokemon)
+      .then(() =>
+      {
+        this.props.history.push('/MyTeam');
+      })
+      .catch((err) =>
+      {
+        console.error(err);
+      });
+  };
 
   componentDidMount ()
   {
@@ -41,6 +69,21 @@ class SinglePokemon extends React.Component
       });
   };
 
+  constructor (props, context) {
+    super(props, context);
+
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleClose () {
+    this.setState({ show: false });
+  }
+
+  handleShow () {
+    this.setState({ show: true });
+  }
+
   render ()
   {
     const mySinglePokemon = this.state.pokemon;
@@ -68,7 +111,19 @@ class SinglePokemon extends React.Component
           <h4>{mySinglePokemon.description}</h4>
         </div>
         <button onClick={this.deletePokemonClick}>X</button>
-        <button>Nickname</button>
+        <button onClick={this.handleShow}>Nickname</button>
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header>
+            <Modal.Title>Nickname</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body><input placeholder="Nickname your pokemon" onChange={this.nicknameUpdate}/></Modal.Body>
+
+          <Modal.Footer>
+            <Button onClick={this.handleClose}>Close</Button>
+            <Button bsStyle="primary" onClick={this.saveNickname}>Save changes</Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     );
   }
