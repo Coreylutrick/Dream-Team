@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button, Modal} from 'react-bootstrap';
 
 import pokemonRequests from '../../firebaseRequests/requests';
 
@@ -9,6 +10,7 @@ class SinglePokemon extends React.Component
   state =
   {
     pokemon: [],
+    show: false,
   }
 
   componentDidMount ()
@@ -41,6 +43,21 @@ class SinglePokemon extends React.Component
       });
   };
 
+  constructor (props, context) {
+    super(props, context);
+
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleClose () {
+    this.setState({ show: false });
+  }
+
+  handleShow () {
+    this.setState({ show: true });
+  }
+
   render ()
   {
     const mySinglePokemon = this.state.pokemon;
@@ -68,7 +85,19 @@ class SinglePokemon extends React.Component
           <h4>{mySinglePokemon.description}</h4>
         </div>
         <button onClick={this.deletePokemonClick}>X</button>
-        <button>Nickname</button>
+        <button onClick={this.handleShow}>Nickname</button>
+        <Modal show={this.state.show}>
+          <Modal.Header>
+            <Modal.Title>Nickname</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body><input placeholder="Nickname your pokemon" /></Modal.Body>
+
+          <Modal.Footer>
+            <Button onClick={this.handldeClose}>Close</Button>
+            <Button bsStyle="primary" onClick={this.handleClose}>Save changes</Button>
+          </Modal.Footer>
+        </Modal>;
       </div>
     );
   }
