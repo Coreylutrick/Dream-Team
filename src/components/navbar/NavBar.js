@@ -34,7 +34,7 @@ class Navbar extends React.Component {
                       <Link to="/pokedex">Pokedex</Link>
                     </li>
                     <li>
-                      <Link to="/myTeam">My Team</Link>
+                      <Link to="/myTeam">My PC</Link>
                     </li>
                     <li className="navbar-form">
                       <button

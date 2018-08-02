@@ -39,7 +39,7 @@ class MyTeam extends React.Component
     });
     return (
       <div>
-        <h2 className="text-center">My Team</h2>
+        <h2 className="text-center">My Pc:</h2>
         <div>{myTeamComponents}</div>
       </div>
     );
