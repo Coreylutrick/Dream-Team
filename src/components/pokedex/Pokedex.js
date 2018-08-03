@@ -87,10 +87,10 @@ class Pokedex extends React.Component
     return (
       <div className="pokedex">
         <h2 className="text-center">Pokedex</h2>
-        <div className="row pokemonContainer">
-          <h3>Search:</h3>
-          <input id="searchThing" placeholder="Search pokemon by name, number, or type" onChange={this.search}/>
-          <button onClick={this.searchPokemon}>Search</button>
+        <div className="row pokemonContainer text-center">
+          <h4>Search:</h4>
+          <input className="col-xs-3 col-xs-offset-4" id="searchThing" placeholder="Search pokemon by name, number, or type" onChange={this.search}/>
+          <img className="col-xs-1" onClick={this.searchPokemon} alt="search" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c325.png"/>
           {AllPokemonComponent}
         </div>
       </div>
