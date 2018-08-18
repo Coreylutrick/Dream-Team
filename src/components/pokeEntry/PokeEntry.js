@@ -14,11 +14,11 @@ class PokeEntry extends React.Component
     const image = details.imgUrl;
     return (
       <li className="pokemonEntry text-center row">
-        <div className="col-xs-4 col-xs-offset-4">
+        <div className="col-xs-4 col-xs-offset-4 box">
           <img src={image} alt={details.name}/>
           <h3>{details.name}</h3>
           <p className="pokeFont">#{details.number}</p>
-          <button className="pokeFont" onClick={this.addClickEvent}>Add To Team</button>
+          <button className="pokeFont btn btn-danger" onClick={this.addClickEvent}>Add To Team</button>
         </div>
       </li>
     );

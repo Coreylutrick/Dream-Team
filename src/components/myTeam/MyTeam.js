@@ -34,13 +34,11 @@ class MyTeam extends React.Component
         this.props.history.push(`/pokemon/${pokemon.id}`);
       };
       return (
-        <div className="col-xs-2">
-          <img onClick={singlePokemonClickEvent} key={pokemon.id} src={pokemon.gifUrl} alt={pokemon.name}/>
-        </div>
+        <img className="pokeImg text-center" onClick={singlePokemonClickEvent} key={pokemon.id} src={pokemon.gifUrl} alt={pokemon.name}/>
       );
     });
     return (
-      <div className="row">
+      <div>
         <h2 className="text-center">My Pc:</h2>
         <div>{myTeamComponents}</div>
       </div>

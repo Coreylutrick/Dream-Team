@@ -90,31 +90,60 @@ class SinglePokemon extends React.Component
     return (
       <div>
         <h1 className="text-center">{mySinglePokemon.name}</h1>
-        <div className="row singlePokemonContainer">
-          <div className="col-xs-2 col-xs-offset-2">
-            <h4>Base Stats:</h4>
+        <div className="row singlePokemonContainer box">
+          <div>
+            <img className="col-xs-4 col-xs-offset-4 pokeImg" src={mySinglePokemon.imgUrl} alt={mySinglePokemon.name}/>
+          </div>
+          <div className="col-xs-2">
+            <h3 className="red">Base Stats:</h3>
             <ul>
-              <li><strong>Hp:</strong> {mySinglePokemon.hp}</li>
-              <li><strong>Attack:</strong> {mySinglePokemon.attack}</li>
-              <li><strong>Defense:</strong> {mySinglePokemon.defense}</li>
-              <li><strong>Sp. Attack:</strong> {mySinglePokemon.spAtk}</li>
-              <li><strong>Sp. Defense:</strong> {mySinglePokemon.spDef}</li>
+              <li><strong>Hp:</strong>{mySinglePokemon.hp}</li>
+              <li><strong>Attack:</strong>{mySinglePokemon.attack}</li>
+              <li><strong>Defense:</strong>{mySinglePokemon.defense}</li>
+              <li><strong>Sp. Attack:</strong>{mySinglePokemon.spAtk}</li>
+              <li><strong>Sp. Defense:</strong>{mySinglePokemon.spDef}</li>
               <li><strong>Speed:</strong>{mySinglePokemon.spd}</li>
             </ul>
-            <h3>Total: {mySinglePokemon.total}</h3>
+            <h4>Total: {mySinglePokemon.total}</h4>
           </div>
-          <div>
-            <img className="col-xs-4 pokeImg" src={mySinglePokemon.imgUrl} alt={mySinglePokemon.name}/>
+          <div className="row">
+            <div className="text-center col-xs-12">
+              <h3 className="red">Nickname:</h3><p>{mySinglePokemon.nickname}</p>
+            </div>
+          </div>
+          <div className="col-xs-12 text-center">
+            <h5>{mySinglePokemon.description}</h5>
+          </div>
+          <div className="row">
+            <div className="col-xs-2">
+              <h3>Height:</h3>
+              <p>{mySinglePokemon.height}</p>
+            </div>
+            <div className="col-xs-2 col-xs-offset-1">
+              <h3>Weight:</h3>
+              <p>{mySinglePokemon.weight}</p>
+            </div>
+            <div className="col-xs-2 col-xs-offset-1">
+              <h3>Abilities:</h3>
+              <ul>
+                <li>{mySinglePokemon.ability1}</li>
+                <li>{mySinglePokemon.ability2}</li>
+              </ul>
+            </div>
+            <div className="col-xs-2 col-xs-offset-1">
+              <h3>Type:</h3>
+              <ul>
+                <li>{mySinglePokemon.type1}</li>
+                <li>{mySinglePokemon.type2}</li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <button className="btn btn-danger col-xs-3 col-xs-offset-3" onClick={this.deletePokemonClick}>Release Pokemon</button>
+            <button className="btn btn-danger col-xs-3" onClick={this.handleShow}>Nickname</button>
           </div>
         </div>
-        <div className="text-center">
-          <h3>Nickname:</h3><p>{mySinglePokemon.nickname}</p>
-        </div>
-        <div className="col-xs-4 col-xs-offset-4 text-center">
-          <h4>{mySinglePokemon.description}</h4>
-        </div>
-        <button onClick={this.deletePokemonClick}>X</button>
-        <button onClick={this.handleShow}>Nickname</button>
+
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header>
             <Modal.Title>Nickname</Modal.Title>
