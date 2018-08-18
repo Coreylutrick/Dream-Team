@@ -111,6 +111,9 @@ class SinglePokemon extends React.Component
               <h3 className="red">Nickname:</h3><p>{mySinglePokemon.nickname}</p>
             </div>
           </div>
+          <div className="text-center">
+            <h3>Pokedex Entry:</h3>
+          </div>
           <div className="col-xs-12 text-center">
             <h5>{mySinglePokemon.description}</h5>
           </div>
